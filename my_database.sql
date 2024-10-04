@@ -1,4 +1,4 @@
-/*CREATE TABLE orders(
+*CREATE TABLE orders(
    order_id VARCHAR(10) PRIMARY KEY,
    order_date DATE NOT NULL,
    customer_id VARCHAR(10) NOT NULL
@@ -164,47 +164,47 @@ INSERT INTO order_details (order_detail_id, order_id, product_id, ordered_quanti
 VALUES ('DZ005', 'Z005', '014', 2, 'PENDING', null, 180.00, 0239903);
  
 INSERT INTO order_details (order_detail_id, order_id, product_id, ordered_quantity, order_status, order_priority, order_total, transaction_id)
-VALUES ('DZ006', 'Z006', '009', 5, 'PENDING', null, 300.00, 038320);*/
+VALUES ('DZ006', 'Z006', '009', 5, 'PENDING', null, 300.00, 038320);*
 
-/* create view view1 as (
+* create view view1 as (
 select*
 from transactions
-where payment_status = ‘PAID’;  */
+where payment_status = ‘PAID’;  *
 
-/* create view view2 as (
+* create view view2 as (
 select product_quantity, product_name, product_ID from products)*/
 
-/*select * from view2 
-order by product_quantity asc;*/
+select * from view2 
+order by product_quantity asc;*
 
-/*create view view3 as (
+*create view view3 as (
      select supplier_id, supplier_name, product_id, product_name, product_quantity
-     from suppliers join products using ( supplier_id));*/
+     from suppliers join products using ( supplier_id));*
 
-/*create view view4 as ( 
+*create view view4 as ( 
 select * 
 from transactions 
 where payment_status = 'CANCELLED'
-);*/
+);*
 
-/*create view view5 as (
+*create view view5 as (
 select order_priority, order_details.order_id
 from order_details 
 join orders on order_details.order_id = orders.order_id
 where order_priority is not null);*/
-/*create view view6 as (
+*create view view6 as (
 select order_id, order_date
-from orders);*/
+from orders);*
 
-/*select * from view6 order by order_date asc*/
-/*select * from view6 order by order_date desc*/
+*select * from view6 order by order_date asc*/
+*select * from view6 order by order_date desc*
 
 
-/*create view view7 as( 
+*create view view7 as( 
      select*  
      from products  
-     where product_quantity < 20); */
+     where product_quantity < 20); *
 
-/*create view view8 as (  
+*create view view8 as (  
 select customer_name, customer_surname, order_id  
-from customers join orders using (customer_id))*/
+from customers join orders using (customer_id))*
