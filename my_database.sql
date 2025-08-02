@@ -1,4 +1,4 @@
-*CREATE TABLE orders(
+CREATE TABLE orders(
    order_id VARCHAR(10) PRIMARY KEY,
    order_date DATE NOT NULL,
    customer_id VARCHAR(10) NOT NULL
@@ -203,8 +203,9 @@ from orders);*
 *create view view7 as( 
      select*  
      from products  
-     where product_quantity < 20); *
+     where product_quantity < 20); 
 
 *create view view8 as (  
 select customer_name, customer_surname, order_id  
 from customers join orders using (customer_id))*
+
